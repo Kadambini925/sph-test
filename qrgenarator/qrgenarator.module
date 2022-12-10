@@ -1,0 +1,22 @@
+<?php
+
+/**
+* Implements hook_theme()
+**/
+function qrgenarator_theme($existing, $type, $theme, $path) {
+  return [
+    'qr_code_block' => [
+      'path' => drupal_get_path('module', 'qrgenarator') . '/templates/block',
+      'variables' => [
+        'qr_code_path' => '',
+      ],
+    ],
+
+    'node__product' => [
+      'template' => 'node--product',
+      'base hook' => 'node',
+      'path' => drupal_get_path('module', 'qrgenarator') . '/templates/node',
+    ],
+  ];
+}
+

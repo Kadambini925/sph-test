@@ -1,0 +1,20 @@
+
+<?php
+
+function qrgenarator_uninstall() {
+
+  $storage_handler = \Drupal::entityTypeManager()
+    ->getStorage('node');
+  $nodes = $storage_handler->loadByProperties(['type' => 'product']);
+  if(sizeof($nodes) > 0){
+    $storage_handler->delete($nodes);
+  }
+
+  
+  $content_type = \Drupal::entityTypeManager()
+    ->getStorage('node_type')
+    ->load('product');
+    if($content_type != null){
+        $content_type->delete();
+    }
+}

@@ -1,0 +1,5 @@
+services:
+  qrgenarator.qr_code_generator:
+    class: Drupal\qrgenarator\Services\QrCodeGenerator
+    arguments: ['data']
+

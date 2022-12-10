@@ -1,0 +1,7 @@
+name: Qrcode generator
+type: module
+description: 'Qr code for product'
+package: custom
+core_version_requirement: ^8 || ^9
+dependencies:
+  - drupal:node
